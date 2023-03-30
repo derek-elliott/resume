@@ -16,6 +16,7 @@ jobs:
           compiler: pdflatex
       - name: Publish
         uses: SierraSoftworks/gh-releases@latest
-        with: ${{ secrets.GITHUB_TOKEN }}
-        files: |
-          out/resume.pdf
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: |
+            out/resume.pdf
