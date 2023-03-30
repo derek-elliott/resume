@@ -5,7 +5,7 @@
 \moderncvcolor{blue}
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}
+\setlength{\hintscolumnwidth}{3cm}
 %\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}
 %\AtBeginDocument{\recomputelengths}
 
@@ -22,98 +22,45 @@
 \begin{document}
 \maketitle
 
-\section{Experience}
+\section{Experience}\label{sec:experience}
+\input{experience}
+\pagebreak[4]
 
-\cventry{\scriptsize March 2020 -- Current}{Software Developer III}{BlackSpoke}{Springfield, VA}{}{
-\begin{itemize}
-	\item Acted as technical, and DevOps lead on multiple government projects
-	\item Provided operational support for multi-tennent cloud environment
-	\item Developed management scripts to reduce cost and ensure compliance with security controls
-	\item Developed custom CI/CD pipelines for infrastructure as code projects
-	\item Developed permission policies for cloud based services to grant least privilege
-	\item Provided deployment and functional testing support during customer defined testing events
-	\item Developed new functionality for and maintained large scale data dissemination service
-\end{itemize}
-}
-
-\cventry{\scriptsize July 2019 -- March 2020}{Data Scientist}{Elder Research, Inc}{Arlington, VA}{}{
-\begin{itemize}
-	\item Acted as technical, and development lifecycle lead on multiple government projects
-	\item Worked closely with government clients to identify and remediate security concerns
-	\item Maintained legacy analytic reporting desktop application
-	\item Developed custom analytic reporting dashboards
-	\item Developed multiple data cleaning and analytic REST based microservices for analyzing financial and text based data
-	\item Architected a custom and extendable ETL and analytics pipeline
-\end{itemize}
-}
-
-\cventry{\scriptsize July 2016 -- July 2019}{Staff Technologist - Data Scientist}{Booz Allen Hamilton}{Alexandria, VA}{}{
-\begin{itemize}
-	\item Developed scalable streaming ETL pipeline
-	\item Developed container orchestration service focusing on short lived stateless services
-	\item Developed a scalable analytic framework with data fusion and mapping
-	\item Developed multiple analytic algorithms as REST based microservices and Spark applications
-	\item Worked closely with government clients to develop and refine a long-term development roadmap
-	\item Acted as ScrumMaster and Technical Lead for a team of nine developers
-	\item Reviewed and managed merge requests from over ten development teams
-	\item Developed specialized CI/CD pipeline for cross domain deployments to secure networks
-	\item Lead multiple client-facing meetings each week for a program of over 120 developers
-\end{itemize}
-}
-
-\cventry{\scriptsize May 2015 -- July 2016}{Security Specialist}{AppRiver}{Gulf Breeze, FL}{}{
-\begin{itemize}
-\item Developed multiple scripting tools to facilitate anti-virus rule coding
-\item Developed accurate pattern recognition and forecasted future patterns based on historical data
-\item Coded anti-virus rules to block malicious email campaigns using regular expressions
-\item Analyzed features and functions to ensure desired results in mitigating spam email campaigns
-\item Created dynamic email filtering rules on demand
-\end{itemize}
-}
-
-% \cventry{\scriptsize Jan 2009 -- Jan 2011}{Cryptologic Linguist(Mandarin Chinese)}{United States Air Force}{}{}{
-% \begin{itemize}
-% 	\item Developed multiple custom scripting tools to facilitate learning and retention
-% 	\item Provided ad-hoc technical support to teammates
-% 	\item Lead production and updating of computer based training and presentations
-% 	\item Supervised a team of eight Airman
-% 	\item Achieved basic fluency of Mandarin Chinese in 63 weeks
-% \end{itemize}
-% }
-
-\section{Skills}
+\section{Skills}\label{sec:skills}
 \cvline{}{
 \begin{itemize}
-	\item Python, Golang, Java, Scala, Groovy, Bash, Typescript, SCSS
+	\item Python, Golang, Bash, Java, Scala, Groovy, Typescript, SCSS
 	\item Angular 8, Flask, Eclipse Jetty, Apache Tomcat, Apache httpd, Nginx
-	\item PostgreSQL, Oracle, ElasticSearch, Redis, Elasticache, Apache Kafka, Apache Spark, Apache Nifi, Databricks
-	\item Amazon Web Services, Google Cloud Services, Mesos, Marathon DC/OS, Kubernetes
-	\item Docker, Git, Maven, Jenkins, SonarQube, HP Fortify, Nexus, Gitlab CI/CD, Terraform
+	\item PostgreSQL, Oracle, ElasticSearch, Redis, Elasticache, Apache Kafka, Apache Spark, Apache Nifi, Databricks, Keycloak, LDAP, FreeIPA
+	\item Amazon Web Services, Google Cloud Services, Kubernetes, Rancher, Mesos, Marathon DC/OS
+	\item Terraform, Terragrunt, Docker, Git, Maven, Jenkins, Gitlab CI/CD, ArgoCD, Helm, SonarQube, HP Fortify, Nexus
 	\item Agile, SAFE, Scrum, Jira, Confluence, Excel, Microsoft Office Suite
 	\item Clustering Algorithms, Regression Algorithms, Convolutional Neural Networks for Image Processing, Anomaly Detection
 	\item Microsoft Windows Vista, 7, 8, 10, OS X, Arch, Ubuntu, CentOS, and RHEL based operating systems
-\end{itemize}}
+\end{itemize}
+}
 
-\section{Certifications}
-\cvline{}{
-\begin{itemize}
-	\item Certified ScrumMaster
-	\item AWS Certified Solutions Architect - Associate
-\end{itemize}}
+%\section{Certifications}
+%\cvline{}{
+%\begin{itemize}
+%	\item Certified ScrumMaster
+%	\item AWS Certified Solutions Architect - Associate
+%\end{itemize}}
 
-\section{Awards}
+\section{Awards}\label{sec:awards}
 \cvline{}{
 \begin{itemize}
 	\item Basic Training Honor Graduate - 2009 - United States Air Force
 	\item First Year Impact Award - 2017 - Booz Allen Hamilton
-\end{itemize}}
+\end{itemize}
+}
 
-\section{Security Clearance}
+\section{Security Clearance}\label{sec:security-clearance}
 \cvline{}{
 \begin{itemize}
 	\item Top Secret/SCI with Counter Intellegance Polygraph - 2019 to present
 \end{itemize}}
 
-\section{Education}
+\section{Education}\label{sec:education}
 \cventry{\scriptsize Aug 2014}{Bachelor of Science}{Mathematics}{University of Nebraska at Omaha}{Omaha, NE}{}
 \end{document}
