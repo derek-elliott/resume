@@ -1,0 +1,21 @@
+name: Publish Resume
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Compile LaTeX doc
+        uses: dante-ev/latex-actions@latest
+        with:
+          root_file: resume.tex
+          compiler: pdflatex
+      - name: Publish
+        uses: SierraSoftworks/gh-releases@latest
+        with: ${{ secrets.GITHUB_TOKEN }}
+        files: |
+          out/resume.pdf
