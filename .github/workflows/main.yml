@@ -10,11 +10,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Compile LaTeX doc
-        uses: dante-ev/latex-action@latest
+        uses: dante-ev/latex-action@2021-A
         with:
           root_file: resume.tex
           compiler: pdflatex
-          args: -output-directory out
       - name: Set current date as env var
         run: echo NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
       - name: Publish
@@ -22,6 +21,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          file: "out/resume.pdf"
+          file: "resume.pdf"
           branches: "main"
           default_release_name: ${{ env.NOW }}
