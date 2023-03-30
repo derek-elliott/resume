@@ -14,9 +14,14 @@ jobs:
         with:
           root_file: resume.tex
           compiler: pdflatex
+          args: -output-directory out
+      - name: Set current date as env var
+        run: echo NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
       - name: Publish
-        uses: SierraSoftworks/gh-releases@v1.0.7
+        uses: xresloader/upload-to-github-release@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          files: |
-            out/resume.pdf
+          file: "out/resume.pdf"
+          branches: "main"
+          default_release_name: ${{ env.NOW }}
